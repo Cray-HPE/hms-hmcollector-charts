@@ -1,6 +1,6 @@
 ---
 global:
-  appVersion: 2.14.0
+  appVersion: 2.15.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/hms-hmcollector
@@ -19,6 +19,7 @@ collectorIngressConfig:
 
   pollingEnabled: "false"
   pollingInterval: "30"
+  pduPollingInterval: "30"
 
   redfishSubscribeEnabled: "false"
   redfishStreamingEnabled: "false"
@@ -41,6 +42,7 @@ collectorPollConfig:
 
   pollingEnabled: "true"
   pollingInterval: "30"
+  pduPollingInterval: "30"
 
   redfishSubscribeEnabled: "true"
   redfishStreamingEnabled: "true"
