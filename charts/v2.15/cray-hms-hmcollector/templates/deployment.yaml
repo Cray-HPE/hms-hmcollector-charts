@@ -7,6 +7,20 @@ metadata:
     app.kubernetes.io/name: cray-hms-hmcollector-ingress
 spec:
   replicas: 3
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - topologyKey: kubernetes.io/hostname
+        labelSelector:
+          matchExpressions:
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+              - cray-hms-hmcollector
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 50%
+    type: RollingUpdate
   selector:
     matchLabels:
       app.kubernetes.io/name: cray-hms-hmcollector-ingress
