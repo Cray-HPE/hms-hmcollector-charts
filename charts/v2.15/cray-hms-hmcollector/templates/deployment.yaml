@@ -7,6 +7,10 @@ metadata:
     app.kubernetes.io/name: cray-hms-hmcollector-ingress
 spec:
   replicas: 3
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 50%
+    type: RollingUpdate
   selector:
     matchLabels:
       app.kubernetes.io/name: cray-hms-hmcollector-ingress
@@ -88,6 +92,16 @@ spec:
               mountPath: /usr/local/cray-pki
           resources:
             {{- .Values.collectorIngressConfig.resources | toYaml | nindent 12 }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - topologyKey: kubernetes.io/hostname
+            labelSelector:
+              matchExpressions:
+                - key: app.kubernetes.io/name
+                  operator: In
+                  values:
+                  - cray-hms-hmcollector-ingress
       volumes:
         - name: hms-hmcollector-kafka-brokers
           configMap:
