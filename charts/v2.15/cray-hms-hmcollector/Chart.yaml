@@ -1,6 +1,6 @@
 apiVersion: v2
 name: "cray-hms-hmcollector"
-version: 2.15.3
+version: 2.15.4
 description: "Kubernetes resources for cray-hms-hmcollector"
 home: "https://github.com/Cray-HPE/hms-hmcollector-charts"
 sources:
@@ -8,6 +8,6 @@ sources:
 maintainers:
   - name: Hardware Management
     url: https://github.com/orgs/Cray-HPE/teams/hardware-management
-appVersion: "2.16.0"
+appVersion: "2.17.0"
 annotations:
   artifacthub.io/license: "MIT"
