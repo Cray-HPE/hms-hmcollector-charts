@@ -1,6 +1,6 @@
 ---
 global:
-  appVersion: 2.19.0
+  appVersion: 2.20.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/hms-hmcollector
@@ -15,6 +15,7 @@ podAnnotations: {}
 #   sidecar.istio.io/proxyMemoryLimit: 5Gi
 
 collectorIngressConfig:
+  replicas: 3
   logLevel: "INFO"
 
   pollingEnabled: "false"
@@ -38,6 +39,7 @@ collectorIngressConfig:
       memory: 256Mi
 
 collectorPollConfig:
+  replicas: 1
   logLevel: "INFO"
 
   pollingEnabled: "true"
