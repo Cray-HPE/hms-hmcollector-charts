@@ -8,7 +8,7 @@ spec:
   gateways:
   - {{ .Values.gateway }}
   hosts:
-  - '*'
+  - '{{ .Values.hmcollector_external_ip }}'
   http:
   - route:
     - destination:
