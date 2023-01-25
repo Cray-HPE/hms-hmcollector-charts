@@ -1,6 +1,6 @@
 ---
 global:
-  appVersion: 2.23.0
+  appVersion: 2.25.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/hms-hmcollector
@@ -80,7 +80,7 @@ kafkaBrokers:
       - cray-fabric-perf-telemetry
       - cray-fabric-crit-telemetry
       - cray-dmtf-resource-event
-      - cray-fabric-health-events
+      - cray-fabric-health
   - BrokerAddress: cray-shared-kafka-kafka-bootstrap.services.svc.cluster.local:9092
     TopicsToPublish:
       - cray-dmtf-resource-event
