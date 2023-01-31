@@ -9,6 +9,9 @@ spec:
   - {{ .Values.gateway }}
   hosts:
   - '{{ .Values.hmcollector_external_ip }}'
+  {{- if .Values.hmcollector_external_hostname }}
+  - '{{ .Values.hmcollector_external_hostname }}'
+  {{ end }}
   http:
   - route:
     - destination:
