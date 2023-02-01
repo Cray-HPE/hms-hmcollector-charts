@@ -21,6 +21,8 @@ chartVersionToApplicationVersion:
   "2.15.9": "2.22.0"
   "2.15.10": "2.22.0"
   "2.15.11": "2.23.0"
+  "2.15.12": "2.25.0"
+  "2.16.0": "2.25.0"
   
 
 # Test results for combinations of Chart, Application, and CSM versions.  
