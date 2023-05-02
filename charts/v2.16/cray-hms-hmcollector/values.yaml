@@ -56,6 +56,8 @@ collectorPollConfig:
 
   vaultEnabled: "true"
 
+  pruneOldSubscriptions: "true"
+
   resources:
     limits:
       cpu: "4"
