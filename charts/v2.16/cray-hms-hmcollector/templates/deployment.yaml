@@ -151,6 +151,9 @@ spec:
             - name: REST_ENABLED
               value: "{{ .Values.collectorPollConfig.restEnabled }}"
 
+            - name: PRUNE_OLD_SUBSCRIPTIONS
+              value: "{{ .Values.collectorPollConfig.pruneOldSubscriptions }}"
+
             - name: HSM_REFRESH_INTERVAL
               value: "{{ .Values.collectorPollConfig.hsmRefreshInterval }}"
             - name: SM_URL
