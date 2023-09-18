@@ -1,6 +1,6 @@
 ---
 global:
-  appVersion: 2.26.0
+  appVersion: 2.27.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/hms-hmcollector
@@ -80,6 +80,10 @@ kafkaBrokers:
       - cray-telemetry-pressure
       - cray-telemetry-humidity
       - cray-telemetry-liquidflow
+      - cray-telemetry-metric
+      - cray-telemetry-powerfactor
+      - cray-telemetry-frequency
+      - cray-telemetry-percent
       - cray-fabric-telemetry
       - cray-fabric-perf-telemetry
       - cray-fabric-crit-telemetry
