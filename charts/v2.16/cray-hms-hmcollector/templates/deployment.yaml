@@ -62,6 +62,10 @@ spec:
               value: "secret/hms-creds"
             - name: HMCOLLECTOR_CA_URI
               value: "{{ .Values.hms_ca_uri }}"
+            - name: LOG_MODES
+              value: ""
+            - name: LOG_XNAMES
+              value: ""
 #            - name: HMCOLLECTOR_LOG_INSECURE_FAILOVER
 #              value: true
           ports:
