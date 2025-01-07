@@ -8,7 +8,7 @@ sources:
 maintainers:
   - name: Hardware Management
     url: https://github.com/orgs/Cray-HPE/teams/hardware-management
-appVersion: "2.35.0" # update pprof image version below as well
+appVersion: "2.35.0"  # update pprof image version below as well
 annotations:
   artifacthub.io/images: |-
     - name: cray-hms-hmcollector-pprof
