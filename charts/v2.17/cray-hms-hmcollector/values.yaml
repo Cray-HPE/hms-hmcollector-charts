@@ -1,6 +1,6 @@
 ---
 global:
-  appVersion: 2.38.0
+  appVersion: 2.39.0
 
 image:
   repository: artifactory.algol60.net/csm-docker/stable/hms-hmcollector
